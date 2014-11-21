@@ -608,11 +608,7 @@ distinguish between netCDF-4 and netCDF-4 classic model files, using the
           classic
 
 In a program, you can call the function
-[nc\_inq\_format](http://www.unidata.ucar.edu/netcdf/docs/netcdf-c.html#nc_005finq-Family)
-(or
-[nf90\_inq\_format](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f90.html#Compiling-and-Linking-with-the-NetCDF-Library)
-for the Fortran-90 interface) to determine the format variant of an open
-netCDF file.
+[nc_inq_format](http://www.unidata.ucar.edu/netcdf/docs/netcdf-c.html#nc_005finq-Family)(or [nf90_inq_format](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f90.html#Compiling-and-Linking-with-the-NetCDF-Library) for the Fortran-90 interface) to determine the format variant of an open netCDF file.
 
 Finally, on a Unix system, one way to display the first four bytes of a
 file, say foo.nc, is to run the following command:
@@ -739,7 +735,7 @@ model, such as user-defined data types, cannot be represented with the
 classic model. Use of added features of the enhanced model requires that
 data be stored in the netCDF-4 format.
 
-Why doesn't the new netCDF-4 installation I built seem to support any of the new features? {#Why-doesn't-the-new-netCDF-4-installation-I-built-seem-to-support-any-of-the-new-features}
+Why doesn't the new netCDF-4 installation I built seem to support any of the new features? {#Whydoesnt-the-new-netCDF-4-installation-I-built-seem-to-support-any-of-the-new-features}
 -----------------
 
 
@@ -787,12 +783,8 @@ or you can specify chunking with the "-c" option.
 To do this within a program, or if you want different variables to have
 different levels of deflation, define compression properties when each
 variable is defined. The function to call is
-[nc\_def\_var\_deflate](/netcdf-c.html#nc_005fdef_005fvar_005fdeflate)
-for C programs,
-[nf90\_def\_var\_deflate](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f90.html#NF90_005fDEF_005fVAR_005fDEFLATE)
-for Fortran 90 programs,
-[NF\_DEF\_VAR\_DEFLATE](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f77.html#NF_005fDEF_005fVAR_005fDEFLATE)
-for Fortran 77. For C++ programs, the experimental cxx4 API may be used,
+[nc_def_var_deflate](/netcdf-c.html#nc_005fdef_005fvar_005fdeflate)
+for C programs, [nf90_def_var_deflate](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f90.html#NF90_005fDEF_005fVAR_005fDEFLATE) for Fortran 90 programs, [NF_DEF_VAR_DEFLATE](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f77.html#NF_005fDEF_005fVAR_005fDEFLATE) for Fortran 77. For C++ programs, the experimental cxx4 API may be used,
 assuming you have configured with --enable-cxx-4.
 
 Although default variable chunking parameters may be adequate,
@@ -805,11 +797,11 @@ compression than chunks that included multiple horizontal slices. There
 are other factors in choosing chunk sizes, especially matching how the
 data will be accessed most frequently. Chunking properties may only be
 specified when a variable is first defined. The function to call is
-[nc\_def\_var\_chunking](http://www.unidata.ucar.edu/netcdf/docs/netcdf-c.html#nc_005fdef_005fvar_005f)
+[nc_def_var_chunking](http://www.unidata.ucar.edu/netcdf/docs/netcdf-c.html#nc_005fdef_005fvar_005f)
 for C programs,
-[nf90\_def\_var\_chunking](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f90.html#NF90_005fDEF_005fVAR_005fCHUNKING)
+[nf90_def_var_chunking](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f90.html#NF90_005fDEF_005fVAR_005fCHUNKING)
 for Fortran 90 programs, and
-[NF\_DEF\_VAR\_CHUNKING](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f77.html#NF_005fDEF_005fVAR_005fCHUNKING)
+[NF_DEF_VAR_CHUNKING](http://www.unidata.ucar.edu/netcdf/docs/netcdf-f77.html#NF_005fDEF_005fVAR_005fCHUNKING)
 for Fortran 77 programs. For C++ programs, the experimental cxx4 API may
 be used, assuming you have configured with --enable-cxx-4.
 
@@ -834,7 +826,7 @@ Python has the [netcdf4-python package](http://code.google.com/p/netcdf4-python/
 ArcGIS 10.0 can read netcdf4 using the Multidimensional Tools in
 ArcToolbox, and in ArcGIS 10.1, the [Multidimensional Supplemental toolbox](http://esriurl.com/MultidimensionSupplementalTools) uses NetCDF4-Python to read OPeNDAP and netCDF4 files, taking advantage of CF conventions if they exist.
 
-What applications are able to deal with *arbitrary* netCDF-4 files? {#What-applications-are-able-to-deal-with-*arbitrary*-netCDF-4-files}
+What applications are able to deal with *arbitrary* netCDF-4 files? {#What-applications-are-able-to-deal-with-arbitrary-netCDF-4-files}
 -----------------
 
 The netCDF utilities **ncdump**, **ncgen**, and **nccopy**, available in
@@ -1005,14 +997,14 @@ more HDF5 data. If you want to access HDF5 data through netCDF
 interfaces, avoid HDF5 features not included in the netCDF enhanced data
 model. For more details see "[How can I convert HDF5 files into netCDF-4 files?](#fv15)", above.
 
-I installed netCDF-3 with --enable-shared, but it looks like the libraries it installed were netCDF-4, with names like libnetcdf.4.dylib. What's going on? {#I-installed-netCDF-3-with---enable-shared-but-it-looks-like-the-libraries-it-installed-were-netCDF-4-with-names-like-libnetcdf.4.dylib.-What's-going-on}
+I installed netCDF-3 with --enable-shared, but it looks like the libraries it installed were netCDF-4, with names like libnetcdf.4.dylib. What's going on? {#I-installed-netCDF-3-with---enable-shared-but-it-looks-like-the-libraries-it-installed-were-netCDF-4-with-names-like-libnetcdf4dylib-Whats-going-on}
 -----------------
 
 
 The number used for the shared library name is not related to the netCDF
 library version number.
 
-NetCDF-3.6.3 permits UTF-8 encoded Unicode names. Won't this break backward compatibility with previous software releases that didn't allow such names? {#NetCDF-3.6.3-permits-UTF-8-encoded-Unicode-names.-Won't-this-break-backward-compatibility-with-previous-software-releases-that-didn't-allow-such-names}
+NetCDF-3.6.3 permits UTF-8 encoded Unicode names. Won't this break backward compatibility with previous software releases that didn't allow such names? {#NetCDF-363-permits-UTF-8-encoded-Unicode-names-Wont-this-break-backward-compatibility-with-previous-software-releases-that-didnt-allow-such-names}
 -----------------
 
 
@@ -1155,7 +1147,7 @@ Linux distributor: [Specifying directories to be searched by the dynamic linker]
 Large File Support {#Large-File-Support}
 ================
 
-Was it possible to create netCDF files larger than 2 GiBytes before version 3.6? {#Was-it-possible-to-create-netCDF-files-larger-than-2-GiBytes-before-version-3.6}
+Was it possible to create netCDF files larger than 2 GiBytes before version 3.6? {#Was-it-possible-to-create-netCDF-files-larger-than-2-GiBytes-before-version-36}
 -----------------
 
 
@@ -1296,7 +1288,7 @@ With netCDF version 3.6.2 or later, there is an easier way, using the
 
 ----------
 
-What happens if I create a 64-bit offset format netCDF file and try to open it with an older netCDF application that hasn't been linked with netCDF 3.6? {#What-happens-if-I-create-a-64-bit-offset-format-netCDF-file-and-try-to-open-it-with-an-older-netCDF-application-that-hasn't-been-linked-with-netCDF-3.6}
+What happens if I create a 64-bit offset format netCDF file and try to open it with an older netCDF application that hasn't been linked with netCDF 3.6? {#What-happens-if-I-create-a-64-bit-offset-format-netCDF-file-and-try-to-open-it-with-an-older-netCDF-application-that-hasnt-been-linked-with-netCDF-36}
 -----------------
 
 
@@ -1318,7 +1310,7 @@ to support access to 64-bit offset netCDF files.
 
 ----------
 
-How do I create a 64-bit offset netCDF file from C, Fortran-77, Fortran-90, or C++? {#How-do-I-create-a-64-bit-offset-netCDF-file-from-C-Fortran-77-Fortran-90-or-C++}
+How do I create a 64-bit offset netCDF file from C, Fortran-77, Fortran-90, or C++? {#How-do-I-create-a-64-bit-offset-netCDF-file-from-C-Fortran-77-Fortran-90-or-Cpp}
 -----------------
 
 
@@ -1620,7 +1612,7 @@ How do I convert between GRIB and netCDF? {#How-do-I-convert-between-GRIB-and-ne
 
 Several programs and packages have been developed that convert between
 [GRIB](http://www.wmo.ch/web/www/DPS/grib-2.html) and netCDF data:
-[ncl\_convert2nc](http://www.ncl.ucar.edu/Applications/grib2netCDF.shtml),
+[ncl_convert2nc](http://www.ncl.ucar.edu/Applications/grib2netCDF.shtml),
 [degrib](http://www.nws.noaa.gov/mdl/NDFD_GRIB2Decoder/),
 [CDAT](software.html#CDAT), [CDO](software.html#CDO),
 [GDAL](http://www.gdal.org/), [GrADS](software.html#GrADS), and
@@ -1769,7 +1761,7 @@ getting their handle to a file.
 
 ----------
 
-How does the C++ interface differ from the C interface? {#How-does-the-C++-interface-differ-from-the-C-interface}
+How does the C++ interface differ from the C interface? {#How-does-the-Cpp-interface-differ-from-the-C-interface}
 -----------------
 
 It provides all the functionality of the C interface (except for the
