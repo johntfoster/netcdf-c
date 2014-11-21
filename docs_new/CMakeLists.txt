@@ -17,52 +17,10 @@ IF(ENABLE_DOXYGEN)
     ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
 
   # Generate User Documentation
-  ADD_CUSTOM_TARGET(doc_all ALL
+  ADD_CUSTOM_TARGET(doc_all_new ALL
     ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
     COMMENT "Generating API Documentation" VERBATIM)
-
-  # If ENABLE_DOXYGEN_LATEX_OUTPUT is true, automatically build
-  # the PDF files.
-  IF(ENABLE_DOXYGEN_PDF_OUTPUT)
-    # Process 'main' netcdf documentation.
-    FIND_PROGRAM(NC_MAKE NAMES make)
-    FIND_PROGRAM(NC_PDFLATEX NAMES pdflatex)
-    IF(NOT NC_MAKE OR NOT NC_PDFLATEX)
-      MESSAGE(WARNING "Unable to locate 'make' and/or 'pdflatex' program.  Unable to build pdf documentation.")
-    ELSE()
-      ADD_CUSTOM_TARGET(doc_all_pdf ALL
-        make
-        COMMAND mv refman.pdf ../netcdf.pdf
-        WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/latex_main"
-        COMMENT "Building NetCDF PDF Documentation" VERBATIM
-        )
-
-      # Process 'guide' netcdf documentation.
-      ADD_CUSTOM_TARGET(doc_guide_pdf ALL
-        make
-        COMMAND mv refman.pdf ../netcdf-guide.pdf
-        WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/latex_guide"
-        COMMENT "Building NetCDF-Guide PDF Documentation" VERBATIM
-        )
-
-      # Process 'tutorial' netcdf documentation.
-      ADD_CUSTOM_TARGET(doc_tutorial_pdf ALL
-        make
-        COMMAND mv refman.pdf ../netcdf-tutorial.pdf
-        WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/latex_tutorial"
-        COMMENT "Building NetCDF-Tutorial PDF Documentation" VERBATIM
-        )
-      INSTALL(FILES "${CMAKE_CURRENT_BINARY_DIR}/netcdf.pdf"
-	"${CMAKE_CURRENT_BINARY_DIR}/netcdf-guide.pdf"
-	"${CMAKE_CURRENT_BINARY_DIR}/netcdf-tutorial.pdf"
-	DESTINATION "${CMAKE_INSTALL_DOCDIR}/pdf"
-	COMPONENT documentation)
-
-    ENDIF()
-
-  ENDIF()
-
 
   # Copy the image files used by markdown documentation
   # manually.

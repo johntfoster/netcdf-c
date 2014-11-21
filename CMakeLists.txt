@@ -1251,6 +1251,9 @@ ENDIF()
 # Build doxygen documentation, if need be.
 #####
 ADD_SUBDIRECTORY(docs)
+# Temporary sandbox directory for pulling apart
+# documentation
+ADD_SUBDIRECTORY(docs_new)
 #####
 # Moving on to CPack, install packages.
 #####
