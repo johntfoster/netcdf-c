@@ -746,19 +746,19 @@ WARN_LOGFILE           =
 INPUT = \
     @abs_top_srcdir@/RELEASE_NOTES.md \
     @abs_top_srcdir@/COPYRIGHT \
-    @abs_top_srcdir@/docs/mainpage.dox \
-    @abs_top_srcdir@/docs/FAQ.md \
-#    @abs_top_srcdir@/docs/architecture.dox \
-#    @abs_top_srcdir@/docs/groups.dox \
-#    @abs_top_srcdir@/docs/install.md \
-#    @abs_top_srcdir@/docs/install-fortran.md \
-#    @abs_top_srcdir@/docs/dispatch.dox \
-#    @abs_top_srcdir@/docs/types.dox \
-#    @abs_top_srcdir@/docs/notes.dox \
-#    @abs_top_srcdir@/docs/internal.dox \
-#    @abs_top_srcdir@/docs/windows-binaries.md \
-#    @abs_top_srcdir@/docs/all-error-codes.md \
-#    @abs_top_srcdir@/docs/cmake_faq.md \
+    @abs_top_srcdir@/docs_new/mainpage.dox \
+    @abs_top_srcdir@/docs_new/FAQ.md \
+#    @abs_top_srcdir@/docs_new/architecture.dox \
+#    @abs_top_srcdir@/docs_new/groups.dox \
+#    @abs_top_srcdir@/docs_new/install.md \
+#    @abs_top_srcdir@/docs_new/install-fortran.md \
+#    @abs_top_srcdir@/docs_new/dispatch.dox \
+#    @abs_top_srcdir@/docs_new/types.dox \
+#    @abs_top_srcdir@/docs_new/notes.dox \
+#    @abs_top_srcdir@/docs_new/internal.dox \
+#    @abs_top_srcdir@/docs_new/windows-binaries.md \
+#    @abs_top_srcdir@/docs_new/all-error-codes.md \
+#    @abs_top_srcdir@/docs_new/cmake_faq.md \
 #    @abs_top_srcdir@/include/netcdf.h \
 #    @abs_top_srcdir@/include/netcdf_meta.h \
 #    @abs_top_srcdir@/libdispatch/dfile.c \
@@ -783,8 +783,8 @@ INPUT = \
 #    @abs_top_srcdir@/libsrc4/nc4file.c \
 #    @abs_top_srcdir@/ncdump/ncdump.c \
 #    @abs_top_srcdir@/ncdump/nccopy.c \
-#    @abs_top_srcdir@/docs/guide.dox \
-#    @abs_top_srcdir@/docs/tutorial.dox \
+#    @abs_top_srcdir@/docs_new/guide.dox \
+#    @abs_top_srcdir@/docs_new/tutorial.dox \
 #    @abs_top_srcdir@/examples/C/simple_xy_wr.c \
 #    @abs_top_srcdir@/examples/C/simple_xy_rd.c \
 #    @abs_top_srcdir@/examples/C/sfc_pres_temp_wr.c \
@@ -883,19 +883,19 @@ EXAMPLE_RECURSIVE      = NO
 # that contain images that are to be included in the documentation (see the
 # \image command).
 
-IMAGE_PATH = @abs_top_srcdir@/docs/images/chunking2.png \
-    @abs_top_srcdir@/docs/images/compatibility3.png \
-    @abs_top_srcdir@/docs/images/compression.png \
-    @abs_top_srcdir@/docs/images/groups.png \
-    @abs_top_srcdir@/docs/images/nc4-model.png \
-    @abs_top_srcdir@/docs/images/ncatts.png \
-    @abs_top_srcdir@/docs/images/nc-classic-uml.png \
-    @abs_top_srcdir@/docs/images/nccoords.png \
-    @abs_top_srcdir@/docs/images/ncfile.png \
-    @abs_top_srcdir@/docs/images/netcdf_architecture.png \
-    @abs_top_srcdir@/docs/images/pnetcdf.png \
-    @abs_top_srcdir@/docs/images/deptree.jpg \
-    @abs_top_srcdir@/docs/images/InstallTreeWindows.jpg
+IMAGE_PATH = @abs_top_srcdir@/docs_new/images/chunking2.png \
+    @abs_top_srcdir@/docs_new/images/compatibility3.png \
+    @abs_top_srcdir@/docs_new/images/compression.png \
+    @abs_top_srcdir@/docs_new/images/groups.png \
+    @abs_top_srcdir@/docs_new/images/nc4-model.png \
+    @abs_top_srcdir@/docs_new/images/ncatts.png \
+    @abs_top_srcdir@/docs_new/images/nc-classic-uml.png \
+    @abs_top_srcdir@/docs_new/images/nccoords.png \
+    @abs_top_srcdir@/docs_new/images/ncfile.png \
+    @abs_top_srcdir@/docs_new/images/netcdf_architecture.png \
+    @abs_top_srcdir@/docs_new/images/pnetcdf.png \
+    @abs_top_srcdir@/docs_new/images/deptree.jpg \
+    @abs_top_srcdir@/docs_new/images/InstallTreeWindows.jpg
 
 # The INPUT_FILTER tag can be used to specify a program that doxygen should
 # invoke to filter for each input file. Doxygen will invoke the filter program
@@ -1128,7 +1128,7 @@ HTML_HEADER            =
 # that doxygen normally uses.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_FOOTER            = @abs_top_srcdir@/docs/footer.html
+HTML_FOOTER            = @abs_top_srcdir@/docs_new/footer.html
 
 # The HTML_STYLESHEET tag can be used to specify a user-defined cascading style
 # sheet that is used by each HTML page. It can be used to fine-tune the look of

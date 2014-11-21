@@ -42,7 +42,7 @@ Fisher at the Unidata Program Center in Boulder, Colorado, with
 
 How do I get the netCDF software package? {#How-do-I-get-the-netCDF-software-package}
 -----------------
- 
+
 
 The latest source distribution, which includes the C libraries and
 utility programs, is available from [the NetCDF Downloads
@@ -342,10 +342,7 @@ compilers:
 -   Solaris
 -   Windows (some versions, see below)
 
-The [NetCDF Installation and Porting
-Guide](/software/netcdf/docs/netcdf-install/index.html) explains how to
-build netCDF from source on various platforms. Often, it's as easy as
-running
+The [NetCDF Installation and Porting Guide](/software/netcdf/docs/netcdf-install/index.html) explains how to build netCDF from source on various platforms. Often, it's as easy as running
 
 ~~~~ {.boldcode}
 ./configure
@@ -538,7 +535,7 @@ Excel 2007 (and later versions).
 
 How do I build netCDF for use with Fortran compiler *xxx* and C compiler *yyy* on platform *zzz*? {#How-do-I-build-netCDF-for-use-with-Fortran-compiler}
 -----------------
- 
+
 
 
 If you have an unusual combination of compilers or platform, you may
@@ -2026,4 +2023,3 @@ Model / NetCDF-Java](https://www.unidata.ucar.edu/jira/browse/CDM),
 and [netCDF-CXX4](https://www.unidata.ucar.edu/jira/browse/NCXXF), and
 [old netCDF-C++
 (deprecated)](https://www.unidata.ucar.edu/jira/browse/NCCPP).
-
